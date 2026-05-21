@@ -22,106 +22,82 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Roboto', sans-serif; background-color: var(--dark-bg); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
-        h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; }
+        h1, h2, h3 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; }
         a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
         img { max-width: 100%; display: block; }
 
-        .top-bar { background: #000; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); border-bottom: 1px solid #222; }
+        /* HEADER */
+        header { position: sticky; top: 0; background: rgba(13, 13, 13, 0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 2px solid var(--primary-cyan); }
+        .logo img { height: 40px; }
+        nav ul { display: flex; gap: 30px; }
         
-        header { position: sticky; top: 0; background: rgba(13, 13, 13, 0.95); backdrop-filter: blur(10px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 2px solid var(--primary-cyan); transition: var(--transition); }
-        .logo { font-size: 1.5rem; font-weight: 900; color: var(--text-light); display: flex; align-items: center; gap: 10px;}
-        .logo img { height: 50px; }
+        /* HERO (Portada principal) */
+        .hero { min-height: 90vh; display: flex; align-items: center; padding: 0 5%; background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('encabezado1.png') center/cover no-repeat; }
+        .hero-content { max-width: 700px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; color: var(--primary-cyan); }
         
-        nav ul { display: flex; gap: 30px; align-items: center; }
-        nav ul li a:hover { color: var(--primary-cyan); }
-        
-        .btn { padding: 12px 25px; border-radius: 4px; font-weight: 700; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; border: none; }
-        .btn-primary { background: var(--primary-cyan); color: #000; }
-        .btn-outline { background: transparent; border: 2px solid var(--primary-cyan); color: var(--primary-cyan); }
-
-        /* HERO CON IMAGEN LOCAL */
-        .hero { min-height: 90vh; display: flex; align-items: center; padding: 0 5%; background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 100%), url('hero-bg.png') center/cover no-repeat; position: relative; }
-        .hero-content { max-width: 700px; z-index: 2; }
-        .hero h1 { font-size: 4rem; margin-bottom: 25px; }
-        
-        .stats { display: grid; grid-template-columns: repeat(4, 1fr); background: linear-gradient(45deg, var(--secondary-blue), var(--primary-cyan)); padding: 40px 5%; text-align: center; color: #000; }
-        
-        .about { padding: 100px 5%; background: var(--section-bg); display: flex; gap: 60px; align-items: center; }
-        .about-img { flex: 1; }
-        .about-img img { border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-        
-        .services { padding: 100px 5%; background: var(--dark-bg); }
+        /* SECCIONES */
+        .section-padding { padding: 80px 5%; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .service-card { background: var(--card-bg); border-radius: 8px; overflow: hidden; border-top: 4px solid var(--primary-cyan); }
-        .service-img { height: 200px; }
-        .service-img img { width: 100%; height: 100%; object-fit: cover; }
-        .service-content { padding: 30px; }
+        .service-img img { width: 100%; height: 200px; object-fit: cover; }
+        .service-content { padding: 25px; }
+        
+        .btn-primary { background: var(--primary-cyan); color: #000; padding: 12px 25px; border-radius: 4px; font-weight: 700; display: inline-block; }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <span><i class="fas fa-map-marker-alt"></i> Distrito de Breña, Lima Centro</span>
-        <span>Atención Corporativa: Lun - Vie | 09:00 - 18:00</span>
-    </div>
-
     <header id="navbar">
         <div class="logo">
-            <img src="encabezado1.png" alt="Logo Bomberos XIV">
+            <span>BOMBEROS XIV</span>
         </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nuestra Historia</a></li>
-                <li><a href="#servicios">Servicios RSE</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
             </ul>
         </nav>
-        <a href="#contacto" class="btn btn-primary">Cotizar Ahora</a>
     </header>
 
     <section class="hero" id="inicio">
         <div class="hero-content">
             <h1>Protección Real para su Empresa</h1>
-            <p>Formamos brigadas y asesoramos al sector corporativo de Lima Centro.</p>
-            <div class="hero-buttons">
-                <a href="#servicios" class="btn btn-primary">Ver Capacitaciones</a>
+            <p>Formamos brigadas y asesoramos al sector corporativo de Lima Centro con instructores que viven la emergencia día a día.</p>
+            <a href="#servicios" class="btn-primary" style="margin-top: 20px;">Ver Capacitaciones</a>
+        </div>
+    </section>
+
+    <section class="section-padding" id="nosotros" style="background: var(--section-bg);">
+        <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="historia.png" alt="Historia" style="border-radius: 10px;">
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h2>130 Años de Servicio</h2>
+                <p>La Compañía N° 14 combina tradición con técnicas modernas de respuesta a emergencias.</p>
             </div>
         </div>
     </section>
 
-    <section class="about" id="nosotros">
-        <div class="about-img">
-            <img src="historia.png" alt="Bomberos en acción">
-        </div>
-        <div class="about-text">
-            <h2>Tradición y Modernización</h2>
-            <p>La Compañía de Bomberos Voluntarios Internacional N.º 14 ha sido un pilar de seguridad en Lima Centro por más de un siglo.</p>
-        </div>
-    </section>
-
-    <section class="services" id="servicios">
+    <section class="section-padding" id="servicios">
+        <h2 style="text-align: center; margin-bottom: 40px;">Nuestros Servicios</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-img"><img src="servicio1.png" alt="Atención Pre-Hospitalaria"></div>
-                <div class="service-content"><h3>Atención Pre-Hospitalaria</h3></div>
+                <div class="service-img"><img src="servicio1.png" alt="Servicio 1"></div>
+                <div class="service-content"><h3>Primeros Auxilios</h3></div>
             </div>
             <div class="service-card">
-                <div class="service-img"><img src="servicio2.png" alt="Lucha Contra Incendios"></div>
+                <div class="service-img"><img src="servicio2.png" alt="Servicio 2"></div>
                 <div class="service-content"><h3>Lucha Contra Incendios</h3></div>
             </div>
             <div class="service-card">
-                <div class="service-img"><img src="servicio3.png" alt="Simulacros"></div>
+                <div class="service-img"><img src="servicio3.png" alt="Servicio 3"></div>
                 <div class="service-content"><h3>Consultoría y Simulacros</h3></div>
             </div>
         </div>
     </section>
 
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('navbar');
-            header.style.background = window.scrollY > 50 ? 'rgba(0, 0, 0, 0.98)' : 'rgba(13, 13, 13, 0.95)';
-        });
-    </script>
 </body>
 </html>
