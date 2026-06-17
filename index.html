@@ -3,101 +3,570 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compañía de Bomberos Internacional N° 14 | Prevención Corporativa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>B Internacional - Capacitaciones Corporativas en Prevención y Respuesta</title>
+    <meta name="description" content="Servicios de capacitación corporativa en prevención de incendios, primeros auxilios y respuesta a emergencias. La ayuda empieza con la preparación.">
     
-    <style>
-        :root {
-            --primary-cyan: #00E5FF;
-            --secondary-blue: #0288D1;
-            --dark-bg: #0d0d0d;
-            --card-bg: #1a1a1a;
-            --section-bg: #121212;
-            --text-light: #F5F5F5;
-            --text-muted: #9E9E9E;
-            --transition: all 0.3s ease;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Roboto', sans-serif; background-color: var(--dark-bg); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; }
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; display: block; }
-
-        /* HEADER */
-        header { position: sticky; top: 0; background: rgba(13, 13, 13, 0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 2px solid var(--primary-cyan); }
-        .logo img { height: 40px; }
-        nav ul { display: flex; gap: 30px; }
-        
-        /* HERO (Portada principal) */
-        .hero { min-height: 90vh; display: flex; align-items: center; padding: 0 5%; background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('encabezado1.png') center/cover no-repeat; }
-        .hero-content { max-width: 700px; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; color: var(--primary-cyan); }
-        
-        /* SECCIONES */
-        .section-padding { padding: 80px 5%; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-card { background: var(--card-bg); border-radius: 8px; overflow: hidden; border-top: 4px solid var(--primary-cyan); }
-        .service-img img { width: 100%; height: 200px; object-fit: cover; }
-        .service-content { padding: 25px; }
-        
-        .btn-primary { background: var(--primary-cyan); color: #000; padding: 12px 25px; border-radius: 4px; font-weight: 700; display: inline-block; }
-    </style>
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header id="navbar">
-        <div class="logo">
-            <span>BOMBEROS XIV</span>
+    <!-- ============================================ -->
+    <!-- BARRA SUPERIOR DE CONTACTO RÁPIDO            -->
+    <!-- ============================================ -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <span><i class="fas fa-phone-alt"></i> +51 (01) 555-0141</span>
+                <span><i class="fas fa-envelope"></i> contacto@binternacional14.com</span>
+                <span><i class="fas fa-map-marker-alt"></i> Lima, Breña - Perú</span>
+            </div>
+            <div class="top-bar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-            </ul>
-        </nav>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- NAVEGACIÓN PRINCIPAL                         -->
+    <!-- ============================================ -->
+    <header class="main-header" id="mainHeader">
+        <div class="container nav-container">
+            <!-- LOGO EDITABLE -->
+            <a href="#inicio" class="logo-link">
+                <div class="logo-wrapper">
+                    <!-- OPCIÓN 1: Imagen PNG -->
+                    <!-- <img src="logo.png" alt="B Internacional" class="logo-img"> -->
+                    
+                    <!-- OPCIÓN 2: SVG (por defecto) -->
+                    <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="50,5 95,50 50,95 5,50" fill="none" stroke="#ffffff" stroke-width="3"/>
+                        <text x="50" y="62" font-family="Montserrat, sans-serif" font-size="42" font-weight="900" fill="#ffffff" text-anchor="middle">B</text>
+                        <text x="50" y="78" font-family="Montserrat, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">INTERNACIONAL</text>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">B INTERNACIONAL</span>
+                    <span class="logo-sub">LIMA BREÑA</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#capacitaciones" class="nav-link">Capacitaciones</a></li>
+                    <li><a href="#contacto" class="nav-link btn-nav">Cotizar</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+        </div>
     </header>
 
+    <!-- ============================================ -->
+    <!-- HERO SECTION                                 -->
+    <!-- ============================================ -->
     <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>Protección Real para su Empresa</h1>
-            <p>Formamos brigadas y asesoramos al sector corporativo de Lima Centro con instructores que viven la emergencia día a día.</p>
-            <a href="#servicios" class="btn-primary" style="margin-top: 20px;">Ver Capacitaciones</a>
+        <div class="hero-overlay"></div>
+        <div class="hero-pattern"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                CAPACITACIONES CORPORATIVAS
+            </div>
+            <h1 class="hero-title">
+                La ayuda empieza<br>
+                <span class="hero-title-accent">con la preparación</span>
+            </h1>
+            <p class="hero-subtitle">
+                Servicios profesionales de capacitación en prevención de incendios, 
+                primeros auxilios y respuesta a emergencias para empresas. 
+                Protege a tu equipo con los mejores especialistas.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-primary">
+                    <i class="fas fa-file-signature"></i> Solicitar Cotización
+                </a>
+                <a href="#servicios" class="btn btn-secondary">
+                    <i class="fas fa-list-ul"></i> Ver Servicios
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">+15</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">+500</span>
+                    <span class="stat-label">Empresas capacitadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><i class="fas fa-clock"></i> 24/7</span>
+                    <span class="stat-label">Atención disponible</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Desliza</span>
+            <div class="scroll-indicator"></div>
         </div>
     </section>
 
-    <section class="section-padding" id="nosotros" style="background: var(--section-bg);">
-        <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px;">
-                <img src="historia.png" alt="Historia" style="border-radius: 10px;">
+    <!-- ============================================ -->
+    <!-- FRANJA DECORATIVA                            -->
+    <!-- ============================================ -->
+    <div class="warning-stripe"></div>
+
+    <!-- ============================================ -->
+    <!-- SERVICIOS                                    -->
+    <!-- ============================================ -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Servicios</span>
+                <h2 class="section-title">Soluciones integrales para tu empresa</h2>
+                <p class="section-subtitle">
+                    Ofrecemos capacitaciones especializadas adaptadas a las necesidades 
+                    de tu organización, cumpliendo con la normativa vigente.
+                </p>
             </div>
-            <div style="flex: 1; min-width: 300px;">
-                <h2>130 Años de Servicio</h2>
-                <p>La Compañía N° 14 combina tradición con técnicas modernas de respuesta a emergencias.</p>
+
+            <div class="services-grid">
+                <!-- Servicio 1 -->
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h3 class="service-title">Prevención de Incendios</h3>
+                    <p class="service-desc">
+                        Capacitación teórica y práctica en uso de extintores, 
+                        sistemas de detección y protocolos de evacuación.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Uso de extintores</li>
+                        <li><i class="fas fa-check-circle"></i> Simulacros de incendio</li>
+                        <li><i class="fas fa-check-circle"></i> Brigadas contra incendios</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Servicio 2 -->
+                <article class="service-card featured">
+                    <div class="service-badge">Más solicitado</div>
+                    <div class="service-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h3 class="service-title">Primeros Auxilios</h3>
+                    <p class="service-desc">
+                        Formación certificada en atención de emergencias médicas, 
+                        RCP, uso de DEA y manejo de trauma básico.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> RCP y uso de DEA</li>
+                        <li><i class="fas fa-check-circle"></i> Atención de heridas</li>
+                        <li><i class="fas fa-check-circle"></i> Manejo de shock</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Servicio 3 -->
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3 class="service-title">Seguridad Industrial</h3>
+                    <p class="service-desc">
+                        Evaluación de riesgos, implementación de protocolos 
+                        de seguridad y cumplimiento normativo SST.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Evaluación de riesgos</li>
+                        <li><i class="fas fa-check-circle"></i> Planes de emergencia</li>
+                        <li><i class="fas fa-check-circle"></i> Auditorías de seguridad</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Servicio 4 -->
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="service-title">Simulacros de Emergencia</h3>
+                    <p class="service-desc">
+                        Diseño y ejecución de simulacros personalizados para 
+                        evaluar la respuesta de tu organización.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Simulacros sismo</li>
+                        <li><i class="fas fa-check-circle"></i> Evacuación de edificios</li>
+                        <li><i class="fas fa-check-circle"></i> Reportes y mejoras</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Servicio 5 -->
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-title">Brigadas de Emergencia</h3>
+                    <p class="service-desc">
+                        Formación y certificación de brigadas internas 
+                        especializadas en respuesta a emergencias.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Brigada contra incendios</li>
+                        <li><i class="fas fa-check-circle"></i> Brigada de primeros auxilios</li>
+                        <li><i class="fas fa-check-circle"></i> Brigada de evacuación</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Servicio 6 -->
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="service-title">Consultoría SST</h3>
+                    <p class="service-desc">
+                        Asesoría especializada en Seguridad y Salud en el Trabajo 
+                        para el cumplimiento de la Ley 29783.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> IPERC y matrices</li>
+                        <li><i class="fas fa-check-circle"></i> Planes de SST</li>
+                        <li><i class="fas fa-check-circle"></i> Comités de seguridad</li>
+                    </ul>
+                    <a href="#contacto" class="service-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="section-padding" id="servicios">
-        <h2 style="text-align: center; margin-bottom: 40px;">Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-img"><img src="servicio1.png" alt="Servicio 1"></div>
-                <div class="service-content"><h3>Primeros Auxilios</h3></div>
+    <!-- ============================================ -->
+    <!-- SOBRE NOSOTROS                               -->
+    <!-- ============================================ -->
+    <section class="about" id="nosotros">
+        <div class="container about-container">
+            <div class="about-image">
+                <div class="about-image-wrapper">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="exp-number">+15</span>
+                        <span class="exp-text">Años de<br>experiencia</span>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-img"><img src="servicio2.png" alt="Servicio 2"></div>
-                <div class="service-content"><h3>Lucha Contra Incendios</h3></div>
-            </div>
-            <div class="service-card">
-                <div class="service-img"><img src="servicio3.png" alt="Servicio 3"></div>
-                <div class="service-content"><h3>Consultoría y Simulacros</h3></div>
+            <div class="about-content">
+                <span class="section-tag">Sobre Nosotros</span>
+                <h2 class="section-title">Profesionales comprometidos con tu seguridad</h2>
+                <p class="about-text">
+                    En <strong>B Internacional</strong> somos un equipo de profesionales 
+                    altamente capacitados en prevención, respuesta y gestión de emergencias. 
+                    Nuestra misión es brindar soluciones integrales que salvaguarden la 
+                    integridad de las personas y el patrimonio de las empresas.
+                </p>
+                <p class="about-text">
+                    Contamos con instructores certificados, equipamiento de última generación 
+                    y metodologías prácticas que garantizan el aprendizaje efectivo de 
+                    nuestros participantes.
+                </p>
+
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div>
+                            <h4>Instructores Certificados</h4>
+                            <p>Personal con amplia experiencia operativa</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div>
+                            <h4>Capacitación In-House</h4>
+                            <p>Nos trasladamos a tus instalaciones</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h4>Certificación Válida</h4>
+                            <p>Documentación respaldada oficialmente</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ============================================ -->
+    <!-- CAPACITACIONES / PROCESO                     -->
+    <!-- ============================================ -->
+    <section class="process" id="capacitaciones">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestro Proceso</span>
+                <h2 class="section-title">¿Cómo trabajamos?</h2>
+                <p class="section-subtitle">
+                    Un proceso simple y efectivo para capacitar a tu equipo
+                </p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Diagnóstico</h3>
+                        <p>Evaluamos las necesidades específicas de tu empresa y el nivel de riesgo de tus operaciones.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Propuesta</h3>
+                        <p>Diseñamos un plan de capacitación a medida con objetivos claros y cronograma definido.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Ejecución</h3>
+                        <p>Implementamos las capacitaciones con metodología teórico-práctica en tus instalaciones.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Certificación</h3>
+                        <p>Entregamos certificados y reportes de evaluación con recomendaciones de mejora.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CTA BANNER                                   -->
+    <!-- ============================================ -->
+    <section class="cta-banner">
+        <div class="container cta-content">
+            <div class="cta-text">
+                <h2><i class="fas fa-shield-alt"></i> ¿Listo para proteger a tu equipo?</h2>
+                <p>Solicita una cotización sin compromiso y recibe una propuesta personalizada.</p>
+            </div>
+            <a href="#contacto" class="btn btn-white">
+                Cotizar Ahora <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACTO                                     -->
+    <!-- ============================================ -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contáctanos</span>
+                <h2 class="section-title">Solicita tu cotización</h2>
+                <p class="section-subtitle">
+                    Completa el formulario y un asesor se comunicará contigo en menos de 24 horas.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+51 (01) 555-0141</p>
+                            <p>+51 999 888 777</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contacto@binternacional14.com</p>
+                            <p>ventas@binternacional14.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Lima, Breña</p>
+                            <p>Perú</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lun - Vie: 8:00 - 18:00</p>
+                            <p>Sáb: 9:00 - 13:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre"><i class="fas fa-user"></i> Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa"><i class="fas fa-building"></i> Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email corporativo *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono"><i class="fas fa-phone"></i> Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="servicio"><i class="fas fa-concierge-bell"></i> Servicio de interés *</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="incendios">Prevención de Incendios</option>
+                            <option value="primeros-auxilios">Primeros Auxilios</option>
+                            <option value="seguridad">Seguridad Industrial</option>
+                            <option value="simulacros">Simulacros de Emergencia</option>
+                            <option value="brigadas">Brigadas de Emergencia</option>
+                            <option value="consultoria">Consultoría SST</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje"><i class="fas fa-comment-alt"></i> Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tus necesidades..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                    </button>
+                    <p class="form-note"><i class="fas fa-lock"></i> Campos obligatorios. Tu información está protegida.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="50,5 95,50 50,95 5,50" fill="none" stroke="#ffffff" stroke-width="3"/>
+                            <text x="50" y="62" font-family="Montserrat, sans-serif" font-size="42" font-weight="900" fill="#ffffff" text-anchor="middle">B</text>
+                        </svg>
+                        <span>B INTERNACIONAL</span>
+                    </div>
+                    <p>La ayuda empieza con la preparación. Capacitaciones corporativas especializadas en seguridad y respuesta a emergencias.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
+                        <li><a href="#capacitaciones"><i class="fas fa-chevron-right"></i> Capacitaciones</a></li>
+                        <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Prevención de Incendios</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Primeros Auxilios</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Seguridad Industrial</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Simulacros</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Brigadas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Lima, Breña - Perú</p>
+                    <p><i class="fas fa-phone-alt"></i> +51 (01) 555-0141</p>
+                    <p><i class="fas fa-envelope"></i> contacto@binternacional14.com</p>
+                    <p><i class="fas fa-clock"></i> Lun-Vie: 8:00 - 18:00</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p><i class="fas fa-copyright"></i> 2026 B Internacional. Todos los derechos reservados.</p>
+                <p><i class="fas fa-hashtag"></i> @binternacional14 | Lima Breña</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FRANJA DECORATIVA FINAL -->
+    <div class="warning-stripe final-stripe"></div>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/51999888777" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
